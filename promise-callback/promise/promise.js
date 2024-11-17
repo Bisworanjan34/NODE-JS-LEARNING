@@ -38,7 +38,7 @@ promisefun()
 // --------------------------
  let addfun=(ten,t3)=>{
     return new Promise((resolve)=>{
-        console.log('data fetching wait asecond.............')
+        console.log('data fetching wait asecond.........._____....')
         setTimeout(()=>{
             console.log('data 1.....')
             let data1res=(ten+t3)
