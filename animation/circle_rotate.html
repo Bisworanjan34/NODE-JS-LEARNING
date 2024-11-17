@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation circle_rotation</title>
+</head>
+<style>
+    body{
+        background: black;
+        color: white;
+        }
+        .container{
+            height: 300px;
+            width: 400px;
+            border: 1px solid rgb(255, 0, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            height: 80px;
+            width:80px;
+            border-radius: 50%;
+            border: 8px solid white;
+            border-right: 8px solid rgb(0, 47, 255);
+            animation:anim 0.8s linear infinite;
+            /* background-color: rgb(250, 37, 37); */
+            
+        }
+        @keyframes anim{
+            0%{
+                rotate: 0;
+            }
+            /* 50%{rotate: 260deg;} */
+
+            100%{rotate: 360deg;}
+        }
+</style>
+<body>
+    <h3 style="font-family: arial;">circle-animation</h3>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>
