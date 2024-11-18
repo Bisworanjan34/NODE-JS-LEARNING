@@ -31,9 +31,15 @@ let teafinal_fun=(final_step)=>{
     setTimeout(() => {
         let reslt=final_step+"  ginger"
         console.log(reslt)
-        console.log('your tea is ready to have drink it....')
+        console.log('your tea is ready for drink (smile)...')
     }, 1000);
 }
+// waterfun()
+// .then((water)=>teaseads_fun(water))
+// .then((tea_seads)=>sweet_fun(tea_seads))
+// .then((final)=>teafinal_fun(final))
+// .catch((err)=>console.log('somithing missing',err))
+
 
 //calling 
 
