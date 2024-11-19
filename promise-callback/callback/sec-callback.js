@@ -8,10 +8,10 @@ let data1=async()=>{
        
     })
 }
-let data2=async()=>{
+let data2=async(ten)=>{
     await new Promise((resolve)=>{
         setTimeout(()=>{
-            console.log('data 2 fetching')
+            console.log('data 2 fetching',ten)
             resolve()
         },1000)
     })
@@ -42,7 +42,7 @@ let data5=async()=>{
     console.log('Process end....')
 }
 data1()
-.then(data2)
+.then(data2(10))
 .then(data3)
 .then(data4)
 .then(data5)
