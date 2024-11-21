@@ -62,7 +62,7 @@ let server = http.createServer((req, res) => {
     // Set CORS headers
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Content-Type', 'text/plain');
-
+    
     if (req.url === '/create-folder') {
         fs.mkdir('./css', { recursive: true }, (err) => {
             if (err) {

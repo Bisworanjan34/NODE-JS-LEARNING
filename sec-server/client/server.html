@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client-server</title>
+    <script>
+        const createFolder = () => {
+            fetch('http://localhost:3030/create')
+                .then((res) => res.text())
+                .then((data) => {
+                    const output = document.getElementById('output');
+                    output.innerHTML = data;
+                })
+                .catch((err) => console.error('Error:', err));
+        };
+
+        const deleteFolder = () => {
+            fetch('http://localhost:3030/delete')
+                .then((res) => res.text())
+                .then((data) => {
+                    const output = document.getElementById('output');
+                    output.innerHTML = data;
+                })
+                .catch((err) => console.error('Error:', err));
+        };
+    </script>
+</head>
+<body>
+    <h2>Client-Server Application</h2>
+    <button onclick="createFolder()">Create Folder</button>
+    <button onclick="deleteFolder()">Delete Folder</button>
+
+    <div id="output"></div>
+</body>
+</html>
