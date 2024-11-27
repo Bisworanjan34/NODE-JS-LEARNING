@@ -1,0 +1,21 @@
+{
+    "users":[{
+        "name":"bisworanjan",
+        "city":"puri",
+        "country":"india",
+        "gender":"male"
+    },
+     {
+        "name":"ramchandra",
+        "city":"ayodhya",
+        "country":"india",
+        "gender":"male"
+    },
+     {
+        "name":"radha",
+        "city":"vrindavan",
+        "country":"india",
+        "gender":"female"
+    }
+]
+}
