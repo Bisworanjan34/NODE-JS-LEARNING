@@ -1,27 +1,25 @@
-let {MongoClient}=require('mongodb')
 let http=require('http')
+let {MongoClient}=require('mongodb')
 let url='mongodb://localhost:27017'
 let mongocl=new MongoClient(url)
-let db_name='food-data'
-let col_name='users'
+let dbname='food-data'
+let colname='users'
 
-let mongofun=async ()=>{
+let mongofun=async()=>{
     await mongocl.connect()
 
-    let db=mongocl.db(db_name)
-
-    let col=db.collection(col_name)
+    let db=mongocl.db(dbname)
+    let col=db.collection(colname)
 
     let data=await col.find().toArray()
-
-    return data;
+    return data; 
 }
+
 let server=http.createServer((req,res)=>{
+    res.setHeader('Access-Control-Allow-Origin','*')
     mongofun()
-    .then((d)=>res.end(JSON.stringify(d)))
-    .catch((er)=>res.end(er,'somthing is error'))
+    .then((data)=>res.end(JSON.stringify(data)))
+    .catch((err)=>res.end(err,'somthing is error'))
 })
 
-server.listen(1012,()=>{
-    console.log('server started app.3...........')
-})
+server.listen(2025,()=>console.log('server staarted'))

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetch data</title>
+</head>
+
+<body>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse itaque dolor veritatis natus quas, inventore omnis
+        cum fuga? Eligendi, neque! Aliquid, praesentium porro iure sapiente inventore commodi pariatur sequi? Magnam.
+    </p>
+    <button onclick="clickfun()">fetch data</button>
+    <script>
+        let clickfun = () => {
+            fetch('http://localhost:2025/')
+                .then((res) => res.json()) // Parse the JSON response
+                .then((data) => console.log(data)) // Log the data to the console
+                .catch((err) => console.error('Fetch error:', err)); // Handle fetch errors
+        };
+    </script>
+</body>
+
+</html>

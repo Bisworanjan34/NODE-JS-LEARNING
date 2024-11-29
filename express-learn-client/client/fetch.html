@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>fetch data from server</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni, repudiandae veniam! Impedit voluptate similique nostrum explicabo hic esse iure tempora aliquid voluptates ducimus minus omnis eos nemo incidunt est delectus, quam natus minima!</p>
+    <button onclick="datafetch()">fetch-data</button>
+<p>data....</p>
+    <script>
+            let p=document.querySelector('p')
+        let datafetch=()=>{
+            fetch('http://localhost:9000')
+            .then((res)=>res.json())
+            .then((data)=>console.log(data))
+        }
+
+        
+    </script>
+</body>
+</html>
